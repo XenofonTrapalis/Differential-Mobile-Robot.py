@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import os
 
 #import data from csv file
-data = pd.read_csv(r'..\Trapalis_project_1\import_data\differential mobile robot data.csv', delimiter = ',' )
+data = pd.read_csv(r'..\Your Path\import_data\differential mobile robot data.csv', delimiter = ',' )
 #import data from User
 radius = float(input("Δώσε ακτίνα τροχών se cm" + '\n'))/100 
 baseline = float(input("Δώσε την απόσταση από την μέση του άξονα του τροχού se cm" + '\n'))/100
@@ -153,27 +153,27 @@ if not os.path.isdir('./Export_data'):
     os.mkdir(path)
 robot_references_data = {'sec':[data_time_sec_new],'x':[robot_data_x],'y':[robot_data_y],'theta':[robot_data_theta]}
 robot_data = pd.DataFrame(robot_references_data, columns=['sec','x','y','theta'])
-robot_data.to_csv (r'..\Trapalis_project_1\Export_data\dianisma_taxythtwn_tou_robot_data.csv', index = False, header=True)
+robot_data.to_csv (r'..\Your Path\Export_data\dianisma_taxythtwn_tou_robot_data.csv', index = False, header=True)
 
 global_references_data = {'sec':[data_time_sec_new],'x':[global_references_data_x],'y':[global_references_data_y],'theta':[global_references_data_theta]}
 global_data = pd.DataFrame(global_references_data, columns=['sec','x','y','theta'])
-global_data.to_csv (r'..\Trapalis_project_1\Export_data\dianisma_taxythtwn_adraneiko_systhma_data.csv', index = False, header=True)
+global_data.to_csv (r'..\Your Path\Export_data\dianisma_taxythtwn_adraneiko_systhma_data.csv', index = False, header=True)
 
 pose_data = {'sec':[data_time_sec_new],'x':[pose_data_x],'y':[pose_data_y],'theta':[pose_data_theta]}
 pose = pd.DataFrame(pose_data, columns=['sec','x','y','theta'])
-pose.to_csv (r'..\Trapalis_project_1\Export_data\pose_data.csv', index = False, header=True)
+pose.to_csv (r'..\Your Path\Export_data\pose_data.csv', index = False, header=True)
 
 taxythes_adraneiako_systhma_data = {'sec':[data_time_sec_new],'right wheel rad/sec':[taxythes_adraneiako_systhma_data_right],'left wheel rad/sec':[taxythes_adraneiako_systhma_data_left]}
 taxythes_adraneiako_data = pd.DataFrame(taxythes_adraneiako_systhma_data, columns=['sec','right wheel rad/sec','left wheel rad/sec'])
-taxythes_adraneiako_data.to_csv (r'..\Trapalis_project_1\Export_data\taxythes_adraneiako_systhma_data.csv', index = False, header=True)
+taxythes_adraneiako_data.to_csv (r'..\Your Path\Export_data\taxythes_adraneiako_systhma_data.csv', index = False, header=True)
 
 taxythtes_robot_data = {'sec':[data_time_sec_new],'right wheel rad/sec':[taxythtes_systhma_robot_data_right],'left wheel rad/sec':[taxythtes_systhma_robot_data_left]}
 taxythtes_systhma_robot_data = pd.DataFrame(taxythtes_robot_data, columns=['sec','right wheel rad/sec','left wheel rad/sec'])
-taxythtes_systhma_robot_data.to_csv (r'..\Trapalis_project_1\Export_data\taxythtes_systhma_robot_data.csv', index = False, header=True)
+taxythtes_systhma_robot_data.to_csv (r'..\Your Path\Export_data\taxythtes_systhma_robot_data.csv', index = False, header=True)
 
 rpm_data_wheel = {'sec':[data_time_sec_new],'right wheel df/dt':[rpm_data_right],'left wheel df/dt':[rpm_data_left]}
 rpm_data = pd.DataFrame(rpm_data_wheel, columns=['sec','right wheel df/dt','left wheel df/dt'])
-rpm_data.to_csv (r'..\Trapalis_project_1\Export_data\rpm_data.csv', index = False, header=True)
+rpm_data.to_csv (r'..\Your Path\Export_data\rpm_data.csv', index = False, header=True)
 
 print('\n' + '\n' + "kinhmatiko provlhma",'\n')
 print("dianisma taxuthtwn tou robot os pros to systhma R tou robot",'\n')
